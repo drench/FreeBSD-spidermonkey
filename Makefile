@@ -57,4 +57,12 @@ do-install:
 	${CP} ${WRKSRC}/${OPSYS}`${UNAME} -r`_DBG.OBJ/jsautocfg.h ${WRKSRC}
 	@${INSTALL_DATA} ${JSH:S,^,${WRKSRC}/,} ${PREFIX}/include/
 
+OPTIONS=   UTF8 "Enable UTF8 support" Off
+
+.include <bsd.port.options.mk>
+
+.if defined(WITH_UTF8)
+CFLAGS+=   -DJS_C_STRINGS_ARE_UTF8
+.endif
+
 .include <bsd.port.mk>
