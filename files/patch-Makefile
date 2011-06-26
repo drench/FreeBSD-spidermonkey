@@ -1,13 +1,11 @@
---- Makefile.ref	2006-07-26 21:16:47.000000000 +0200
-+++ Makefile.ref	2008-06-18 17:43:04.000000000 +0200
-@@ -335,8 +335,8 @@
- $(PROGRAM): $(PROG_OBJS) $(LIBRARY)
+--- Makefile.ref.orig	2011-03-31 14:08:36.000000000 -0500
++++ Makefile.ref	2011-08-11 19:46:02.000000000 -0500
+@@ -420,7 +420,7 @@
  	link.exe -out:"$@" $(EXE_LINK_FLAGS) $^
  else
--$(PROGRAM): $(PROG_OBJS) $(LIBRARY)
--	$(CC) -o $@ $(CFLAGS) $(PROG_OBJS) $(LIBRARY) $(LDFLAGS) $(OTHER_LIBS) \
-+$(PROGRAM): $(PROG_OBJS) $(SHARED_LIBRARY)
-+	$(CC) -o $@ $(CFLAGS) $(PROG_OBJS) -L$(OBJDIR) -ljs $(LDFLAGS) $(OTHER_LIBS) \
+ $(PROGRAM): $(PROG_OBJS) $(LIBRARY)
+-	$(CXX) -o $@ $(CFLAGS) $(PROG_OBJS) $(LIBRARY) $(LDFLAGS) $(OTHER_LIBS) \
++	$(CXX) -o $@ $(CFLAGS) $(PROG_OBJS) -L$(OBJDIR) -ljs $(LDFLAGS) $(OTHER_LIBS) \
  	    $(PROG_LIBS)
  endif
  

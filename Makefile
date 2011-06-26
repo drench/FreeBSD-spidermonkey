@@ -5,11 +5,11 @@
 # $FreeBSD: ports/lang/spidermonkey/Makefile,v 1.25 2009/06/23 19:47:12 pgollucci Exp $
 
 PORTNAME=	spidermonkey
-DISTVERSION=	1.7.0
+DISTVERSION=	1.8.5
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_MOZILLA_EXTENDED}
 MASTER_SITE_SUBDIR=	js
-DISTNAME=	js-${DISTVERSION}
+DISTNAME=	js185-1.0.0
 
 MAINTAINER=	citric@cubicone.tmetic.com
 COMMENT=	A standalone JavaScript interpreter from the Mozilla project
@@ -28,7 +28,7 @@ MAKEFILE=	Makefile.ref
 ALL_TARGET=	${OPSYS}`${UNAME} -r`_DBG.OBJ/js
 MAKE_ENV+=	CCC="${CXX}"
 USE_LDCONFIG=	yes
-SRC_DIR=	js/src
+SRC_DIR=	js-${DISTVERSION}/js/src
 
 JSH=		jsapi.h jsarena.h jsarray.h jsatom.h jsautocfg.h jsbool.h \
 		jsclist.h jscntxt.h jscompat.h jsconfig.h jsdate.h jsdhash.h \
