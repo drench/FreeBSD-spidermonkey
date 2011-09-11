@@ -36,7 +36,7 @@ JSH=		jsapi.h jsarena.h jsarray.h jsatom.h jsautocfg.h jsbool.h \
 		jsiter.h jslibmath.h jslock.h jslong.h jsmath.h jsnum.h jsobj.h \
 		jsopcode.h jsosdep.h jsotypes.h jsparse.h jsprvtd.h jspubtd.h \
 		jsregexp.h jsscan.h jsscope.h jsscript.h jsstr.h jstypes.h \
-		jsxdrapi.h jsxml.h \
+		jsxdrapi.h jsxml.h jsutil.h jsprf.h js.msg \
 		jsproto.tbl
 
 PLIST_FILES=	bin/js lib/libjs.so lib/libjs.so.1 ${JSH:S,^,include/,}
